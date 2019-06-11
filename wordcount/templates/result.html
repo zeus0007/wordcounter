@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>result</title>
+        <style>
+        </style>
+    </head>
+    <body>
+        <h1>초정밀 분석 결과 : <br><span class="anwcolor">당신이 입력한 텍스트는 {{total}}개<!--총 단어수 --> 로 구성되어 있습니다.ㅎ</span></h1>
+        <br>
+        <h2>입력한 텍스트 :</h2> 
+        <!--입력 받은 전체 텍스트-->
+        {{full}}
+        <h2>단어 카운트 : </h2>
+        {% for word, howmany in dictionary%}
+        
+        {{word}} : {{howmany}}
+        <br>
+        {%endfor%}
+        <!-- '단어' - '단어가 나온 횟수'-->
+        
+        <a href="{% url 'home' %}">다시 하시겠습니까?</a>
+    </body>
+        
+</html>
+

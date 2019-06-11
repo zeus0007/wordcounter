@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>wordcount</title>
+        <style>
+        h1{
+           text-align: center;
+           color: violet; 
+        }
+        #submitbt{
+            color : violet;
+            padding: 10px;
+        }
+        .btstyle{
+            text-align : center;
+        }
+        #formst{
+            text-align : center;
+            margin : 10px;
+        }
+        .linkst{
+            text-align : center;
+            margin-top : 100px;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>여기에서 열심히 글자를 세시면 됩니다.</h1>
+        <form action="{%url 'result'%}" id="formst">
+            <textarea cols="41" rows="10" name="fulltext" placeholder="글자를 입력하세요."></textarea>
+            <div class="btstyle">
+                <input type="submit" value="초정밀 분석" id="submitbt">
+            </div>
+        </form>
+        <div class="linkst">
+            <a href="{%url 'about'%}">이 페이지는 도대체 무슨 페이지인가요?</a>
+        </div>
+    </body>
+</html>
